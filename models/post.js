@@ -1,4 +1,4 @@
-import mongoose, { mongo } from 'mongoose'
+import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema;
 
@@ -8,4 +8,4 @@ const postSchema = new Schema({
     pessoaId: String, 
 })
 
-module.exports = mongoose.model('Post', postSchema)
+export default mongoose.model('Post', postSchema)
