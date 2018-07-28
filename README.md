@@ -101,9 +101,13 @@ Agora utilizaremos a query que seleciona uma Pessoa específica pelo nome e junt
 
 ```
 {
-  pessoas{
+  pessoa(nome: "Pedro"){
     nome
     idade
+    posts{
+      titulo
+      texto
+    }
   }
 }
 ```
