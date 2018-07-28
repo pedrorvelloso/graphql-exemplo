@@ -33,18 +33,16 @@ const resolvers = {
             return pessoa.save()
         },
         addPost: async (root, args) => {
-            let pessoa = null
-            await Pessoa.findOne({ nome: args.autor }, (err, p) => {
-                if (p !== null) {
-                    pessoa = p.id
-                }
+            let pessoa = await Pessoa.findOne({ _id: args.autorId }, (err, p) => {
+                return p
+            }).catch(err => {
+                return null
             })
-
             if (pessoa !== null) {
                 let post = new Post({
                     titulo: args.titulo,
                     texto: args.texto,
-                    pessoaId: pessoa
+                    pessoaId: pessoa.id
                 })
                 post.save()
                 return "Post feito com sucesso!"

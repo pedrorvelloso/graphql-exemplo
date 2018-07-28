@@ -81,11 +81,11 @@ O JSON esperado:
 }
 ```
 
-Agora utilizando a *mutation* para inserir um Post (a *mutation* verifica a existência da Pessoa no banco):
+Agora utilizando a *mutation* para inserir um Post (a *mutation* verifica a existência do Id da Pessoa no banco):
 
 ```
 mutation{
-  addPost(titulo: "Teste", texto: "Texto Teste", autor: "Pedro")
+  addPost(titulo: "Teste", texto: "Texto Teste", autorId: "5b5bf280e78edf1ca7299827")
 }
 ```
 

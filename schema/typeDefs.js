@@ -25,7 +25,7 @@ const typeDefs = gql`
 
     type Mutation {
         addPessoa(nome: String!, idade: Int!, cidade: String!): Pessoa
-        addPost(titulo: String!, texto: String!, autor: String!): String
+        addPost(titulo: String!, texto: String!, autorId: ID!): String
     }
 `
 
