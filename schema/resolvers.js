@@ -3,28 +3,28 @@ import Post from '../models/post'
 
 const resolvers = {
     Pessoa: {
-        posts(root, args) {
+        posts: (root) => {
             return Post.find({ pessoaId: root.id })
         }
     },
     Post: {
-        autor(root, args) {
+        autor: (root) => {
             return Pessoa.findById(root.pessoaId)
         }
     },
     Query: {
-        pessoas() {
+        pessoas: () => {
             return Pessoa.find({})
         },
-        pessoa(root, args, context) {
+        pessoa: (root, args, context) => {
             return Pessoa.findOne({ nome: args.nome })
         },
-        posts() {
+        posts: () => {
             return Post.find({})
         },
     },
     Mutation: {
-        addPessoa(root, args) {
+        addPessoa: (root, args) => {
             let pessoa = new Pessoa({
                 nome: args.nome,
                 idade: args.idade,
@@ -32,7 +32,7 @@ const resolvers = {
             })
             return pessoa.save()
         },
-        async addPost(root, args) {
+        addPost: async (root, args) => {
             let pessoa = null
             await Pessoa.findOne({ nome: args.autor }, (err, p) => {
                 if (p !== null) {
