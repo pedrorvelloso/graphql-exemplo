@@ -162,7 +162,7 @@ Listar todos os posts:
 }
 ```
 
-## Fazendo requisições para nosso servidor
+## Fazendo requisições para o servidor
 
 Um servidor GraphQL recebe requisições HTTP, logo o metódo de realizar requisições é bem semelhante ao padrão REST. 
 
