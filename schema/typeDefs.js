@@ -9,6 +9,9 @@ const typeDefs = gql`
 
     # Os comentários em 'resolvers.js' explicam como utilizar os dados do banco/API externa
 
+    # https://www.apollographql.com/docs/graphql-tools/generate-schema.html
+    # https://www.apollographql.com/docs/graphql-tools/schema-directives.html
+
     type Pessoa {
         id: ID
         nome: String

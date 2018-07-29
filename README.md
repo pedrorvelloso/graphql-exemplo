@@ -9,7 +9,7 @@ Exemplo simples de um servidor GraphQL (Apollo) utilizando MongoDB
 
 ## Rodando o servidor
 
-Instale as dependências do projeto e rode com os comandos no terminal:
+Para iniciar o projeto utilize os seguintes comandos:
 
 ```
 npm i
