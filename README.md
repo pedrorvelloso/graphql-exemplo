@@ -162,6 +162,28 @@ Listar todos os posts:
 }
 ```
 
+## Fazendo requisições para nosso servidor
+
+Um servidor GraphQL recebe requisições HTTP, logo o metódo de realizar requisições é bem semelhante ao padrão REST. 
+
+Podemos fazer a requisição tanto via GET, passando a *query string* "query" com a string da nossa query:
+
+![](https://i.imgur.com/OnIOu4C.png)
+
+Podemos também fazer a requisição via POST passando a query no corpo:
+
+![](https://i.imgur.com/Jazc9pW.png)
+
+O Playground também disponibiliza o cUrl para a requisição:
+
+```
+curl 'http://localhost:4000/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: http://localhost:4000' --data-binary '{"query":"{pessoas{nome}}"}' --compressed
+```
+
+Entretanto, já existem algumas integrações para Frontend. O proprío Apollo tem a parte para cliente ([Apollo Client](https://www.apollographql.com/client)).
+
+O Facebook também tem a integração chamada [Relay](https://facebook.github.io/relay/).
+
 ### Refs
 
 - [GraphQL](https://graphql.org/)
