@@ -180,7 +180,7 @@ O Playground também disponibiliza o cUrl para a requisição:
 curl 'http://localhost:4000/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: http://localhost:4000' --data-binary '{"query":"{pessoas{nome}}"}' --compressed
 ```
 
-Entretanto, já existem algumas integrações para Frontend. O proprío Apollo tem a parte para cliente ([Apollo Client](https://www.apollographql.com/client)).
+Entretanto, já existem algumas integrações para Frontend. O proprío Apollo tem a parte para cliente [Apollo Client](https://www.apollographql.com/client).
 
 O Facebook também tem a integração chamada [Relay](https://facebook.github.io/relay/).
 
