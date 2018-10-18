@@ -9,7 +9,7 @@ import resolvers from './schema/resolvers'
 // Conexão com MongoDB (Mongoose)
 // No exemplo o Mongoose criara a db e eventuais coleções 
 // Troque a string se for seu caso
-mongoose.connect('mongodb://localhost:27017/graphql-exemplo', { useNewUrlParser: true })
+mongoose.connect('mongodb://0.0.0.0:27017/graphql-exemplo', { useNewUrlParser: true })
 mongoose.connection.once('open', () => {
     console.log('📚  Mongo conectado')
 });
